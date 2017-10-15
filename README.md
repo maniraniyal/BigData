@@ -57,11 +57,13 @@
 
 
 11. Now you should be able to run hadoop; check it by running below command
+
    **bin/hadoop**
 ![](https://github.com/maniraniyal/BigData/blob/master/16.png?raw=true)
 
 
 12. Now we will update some configuration files for pseudo-distributed operation. First we will edit **etc/hadoop/core-site.xml** file as below.
+
    `<configuration>
     <property>
         <name>fs.defaultFS</name>
@@ -72,7 +74,8 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/18.png?raw=true)
 
 
-13. Similarly, we will update etc/hadoop/hdfs-site.xml file as below.
+13. Similarly, we will update **etc/hadoop/hdfs-site.xml** file as below.
+
 `<configuration>
     <property>
         <name>dfs.replication</name>
@@ -82,7 +85,8 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/19.png?raw=true)
 
 
-14. Now we will setup passwordless ssh for Hadoop. First check if you already have passwordless ssh authentication setuped; if it is new Ubuntu installation most likely it wouldn't be the case. If passwordless ssh authentication is not setuped please follow next step othervise skip it.
+14. Now we will setup passwordless ssh for Hadoop. First check if you already have passwordless ssh authentication setup; if it is new Ubuntu installation most likely it wouldn't set up. If passwordless ssh authentication is not setup, please follow next step othervise skip it.
+
    **ssh localhost**
 ![](https://github.com/maniraniyal/BigData/blob/master/20.png?raw=true)
 
@@ -94,10 +98,11 @@
   **cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys**
   
   **chmod 0600 ~/.ssh/authorized_keys**
+  
 ![](https://github.com/maniraniyal/BigData/blob/master/21.png?raw=true)
 
 
-16. Now we will start NameNode and DataNode but before that we will format the file system.
+16. Now we will start NameNode and DataNode but before that we will format the HDFS file system.
 ![](https://github.com/maniraniyal/BigData/blob/master/23.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/24.png?raw=true)
 
@@ -107,25 +112,27 @@
 
 
 18. Now let's create some directories in HDFS filesystem.
-![]https://github.com/maniraniyal/BigData/blob/master/26.png?raw=true()
+![](https://github.com/maniraniyal/BigData/blob/master/26.png?raw=true)
 
 
-19. Let's download one html page and upload into HDFS file system.
+19. Let's download one html page http://hadoop.apache.org and upload into HDFS file system.
+
+   **wget http://hadoop.apache.org -O hadoop_home_page.html**
 ![](https://github.com/maniraniyal/BigData/blob/master/27.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/28.png?raw=true)
 
-Please note that HDFS file system is not same as root file system.
+**Please note that HDFS file system is not same as root file system.**
 ![](https://github.com/maniraniyal/BigData/blob/master/30.png?raw=true)
 
 # Grep example:
-20. For this example we are using hadoop-mapreduce-examples-2.7.4.jar file which comes along with Hadoop. in this example we are trying to count total number of 'https' word occurences in the given file. First we run the Hadoop job then copy the results from HDFS to local file system.
+20. For this example we are using **hadoop-mapreduce-examples-2.7.4.jar** file which comes along with Hadoop. In this example we are trying to count the total number of 'https' word occurences in the given files. First we run the Hadoop job then copy the results from HDFS to the local file system.
 ![](https://github.com/maniraniyal/BigData/blob/master/35.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/36.png?raw=true)
 We can see that there are 2 occurences of https in the given file and same we can validate using wget command.
 
 
 # Wordcount example:
-21. For wordcount example also we are using hadoop-mapreduce-examples-2.7.4.jar file. The wordcount example returns the count of each word in the given documents.
+21. For wordcount example also we are using **hadoop-mapreduce-examples-2.7.4.jar** file. The wordcount example returns the count of each word in the given documents.
 ![](https://github.com/maniraniyal/BigData/blob/master/33.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/34.png?raw=true)
 
@@ -135,6 +142,6 @@ We can see that there are 2 occurences of https in the given file and same we ca
 ![](https://github.com/maniraniyal/BigData/blob/master/39.png?raw=true)
 
 
-22. We run the program as mentioned below
+22. We run the program as below and the copy the result to local file system. 
 ![](https://github.com/maniraniyal/BigData/blob/master/37.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/38.png?raw=true)
