@@ -88,6 +88,7 @@
 14. Now we will setup passwordless ssh for Hadoop. First check if you already have passwordless ssh authentication setup; if it is new Ubuntu installation most likely it wouldn't set up. If passwordless ssh authentication is not setup, please follow next step othervise skip it.
 
    **ssh localhost**
+   
 ![](https://github.com/maniraniyal/BigData/blob/master/20.png?raw=true)
 
 
