@@ -1,1 +1,1 @@
-# Hadoop Instalation Demo
+# Hadoop Installation Demo
