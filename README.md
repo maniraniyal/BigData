@@ -1,4 +1,4 @@
-# Hadoop Installation Demo
+# Step By Step guide for Hadoop installation on Ubuntu 16.04.3 with MapReduce example using Streaming
 
 1. Download Virtual Box from: https://www.virtualbox.org/wiki/Downloads
 ![](https://github.com/maniraniyal/BigData/blob/master/A1.png?raw=true)
