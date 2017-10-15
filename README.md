@@ -18,16 +18,20 @@
 
 
 5. First we will update the system's local repository and then install JAVA (default JDK). Run below commands on the terminal.
-   sudo apt-get update
-   sudo apt-get install default-jdk -y
+
+   **sudo apt-get update**
+   
+   **sudo apt-get install default-jdk -y**
 ![](https://github.com/maniraniyal/BigData/blob/master/7.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/8.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/9.png?raw=true)
 
 
 6. Now we will install ssh and rsync packages by running following commands.
-   sudo apt-get install ssh -y
-   sudo apt-get install rsync -y
+
+   **sudo apt-get install ssh -y**
+   
+   **sudo apt-get install rsync -y**
 ![](https://github.com/maniraniyal/BigData/blob/master/10.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/11.png?raw=true)
 
@@ -47,12 +51,12 @@
 
 
 10. Update JAVA_HOME variable in etc/hadoop/hadoop-env.sh file using gedit command as shown below.
-   export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+   **export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")**
 ![](https://github.com/maniraniyal/BigData/blob/master/22.png?raw=true)
 
 
 11. Now you should be able to run hadoop; check it by running below command
-   bin/hadoop
+   **bin/hadoop**
 ![](https://github.com/maniraniyal/BigData/blob/master/16.png?raw=true)
 
 
@@ -78,14 +82,17 @@
 
 
 14. Now we will setup passwordless ssh for Hadoop. First check if you already have passwordless ssh authentication setuped; if it is new Ubuntu installation most likely it wouldn't be the case. If passwordless ssh authentication is not setuped please follow next step othervise skip it.
-   ssh localhost
+   **ssh localhost**
 ![](https://github.com/maniraniyal/BigData/blob/master/20.png?raw=true)
 
 
 15. run below commands:
-  ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-  chmod 0600 ~/.ssh/authorized_keys
+
+  **ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa**
+  
+  **cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys**
+  
+  **chmod 0600 ~/.ssh/authorized_keys**
 ![](https://github.com/maniraniyal/BigData/blob/master/21.png?raw=true)
 
 
