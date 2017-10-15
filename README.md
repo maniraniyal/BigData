@@ -4,7 +4,7 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/A1.png?raw=true)
 
 
-2. Download Ubuntu 16.04.3 (desktop version amd64) from: https://www.ubuntu.com/download/desktop
+2. Download Ubuntu 16.04.3 (desktop version **amd64**) from: https://www.ubuntu.com/download/desktop
    OR 
    Direct Download from: http://mirror.pnl.gov/releases/xenial/ubuntu-16.04.3-desktop-amd64.iso
 ![](https://github.com/maniraniyal/BigData/blob/master/A4.png?raw=true)
@@ -14,7 +14,7 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/A3.png?raw=true)
 
 
-4. After installing Ubuntu login to th VM and follow instructions given in https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html . Here I am giving step by step details for the installation steps.
+4. After installing Ubuntu login to th VM and follow instructions given in https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html . **Here I am giving step by step details for the installation steps.**
 
 
 5. First we will update the system's local repository and then install JAVA (default JDK). Run below commands on the terminal.
@@ -36,7 +36,7 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/11.png?raw=true)
 
 
-7. Now download Hadoop 2.7.4 from http://www.apache.org/dyn/closer.cgi/hadoop/common/
+7. Now download Hadoop **2.7.4** from http://www.apache.org/dyn/closer.cgi/hadoop/common/
 ![](https://github.com/maniraniyal/BigData/blob/master/download_hadoop.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/12.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/13.png?raw=true)
@@ -51,6 +51,7 @@
 
 
 10. Update JAVA_HOME variable in etc/hadoop/hadoop-env.sh file using gedit command as shown below.
+
    **export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")**
 ![](https://github.com/maniraniyal/BigData/blob/master/22.png?raw=true)
 
@@ -60,24 +61,24 @@
 ![](https://github.com/maniraniyal/BigData/blob/master/16.png?raw=true)
 
 
-12. Now we will update some configuration files for pseudo-distributed operation. First we will edit etc/hadoop/core-site.xml file as below.
-   <configuration>
+12. Now we will update some configuration files for pseudo-distributed operation. First we will edit **etc/hadoop/core-site.xml** file as below.
+   `<configuration>
     <property>
         <name>fs.defaultFS</name>
         <value>hdfs://localhost:9000</value>
     </property>
-   </configuration>
+   </configuration>`
 ![](https://github.com/maniraniyal/BigData/blob/master/18_1.png?raw=true)
 ![](https://github.com/maniraniyal/BigData/blob/master/18.png?raw=true)
 
 
 13. Similarly, we will update etc/hadoop/hdfs-site.xml file as below.
-<configuration>
+`<configuration>
     <property>
         <name>dfs.replication</name>
         <value>1</value>
     </property>
-</configuration>
+</configuration>`
 ![](https://github.com/maniraniyal/BigData/blob/master/19.png?raw=true)
 
 
